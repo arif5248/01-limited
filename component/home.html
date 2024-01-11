@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../JS/home.js"></script>
+    <title>Home</title>
+
+</head>
+<body>
+    <section class="mainSection">
+        <div id="popUpSec" class="popUpSec">
+            <div class="container">
+                <div class="moreHeading">
+                    <span style="width: 30px;"></span>
+                    <h3 class="heading">More</h3>
+                    <img onclick="closeMore()" style="width: 30px; height: 30px;" src="../images/icons/remove.png" alt="Close">
+                </div>
+                <br>
+                <div id="more-table1"></div>
+            </div>
+        </div>
+            
+        <div class="section section-header">
+            <div id="navbarAfter"></div>
+        </div>
+    
+        <div class="section section-profile">
+            <div class="container">
+                <div class="profile-content" id="profile-content">
+    
+                </div>
+            </div>
+        </div>
+    
+        <div class="section section-table-1">
+            <div class="container">
+                <div class="table1Content-btn">
+                    <div id="table-1Content" class="table-1Content"></div>
+                    <div class="moreBtn">
+                        <div class="more" onclick="showMore()">More...</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div class="section section-table-2">
+            <div class="container">
+                <div id="table-2Content" class="table-2Content"></div>
+            </div>
+        </div>
+        <div class="section section-availableStok">
+            <div class="container">
+                <div class="availableStockHeading">
+                    <h3>AVAILABLE STOCKS</h3>
+                </div>
+                <div class="btnRow">
+                    <div class="btnGroup">
+                        <div class="stockBtn active" onclick="showStockData('currentStockBody')">
+                            <div class="currentBtn">CURRENT STOCK</div>
+                        </div>
+                        <div class="stockBtn" onclick="showStockData('oldStockBody')">
+                            <div class="oldButton">OLD STOCK</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stockBody">
+                    <div class="currentStockBody" id="currentStockBody">currentStockBody</div>
+                    <div class="oldStockBody" id="oldStockBody">oldStockBody</div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    
+        <div class="section-footer">
+            <div class="footer-icon">
+                <img style="width: 45px; height: auto;" src="../images/home-button.png" alt="">
+            </div>
+            <div class="footer-icon">
+                <img style="width: 45px; height: auto;" src="../images/stock.png" alt="">
+            </div>
+            <div class="footer-icon">
+                <img style="width: 45px; height: auto;" src="../images/trade.png" alt="">
+            </div>
+            <div class="footer-icon">
+                <img style="width: 45px; height: auto;" src="../images/newspaper.png" alt="">
+            </div>
+        </div>
+       
+        
+
+    </section>
+</body>
+<!-- <img src="../images/user_photo.jpeg" alt=""> -->
+</html>
