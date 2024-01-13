@@ -18,7 +18,7 @@ function includeHeader() {
             document.getElementById("navbarBefore").innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", "../component/layout/homeNavbar.html", true);
+    xhttp.open("GET", "./component/layout/homeNavbar.html", true);
     xhttp.send();
 }
 function sendMessage(){
