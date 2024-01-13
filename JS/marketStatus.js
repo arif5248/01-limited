@@ -26,6 +26,4 @@ window.onload = function() {
     includeNabButton();
     displayDimensions();
     onloadeddata() 
-    // document.getElementById('exchangeNews').style.display = 'none';
-    // document.getElementById('miscNews').style.display = 'none';
 };
