@@ -111,7 +111,6 @@ function getTable1(){
     table.classList.add('tablee','table-borderlesss')
 
     table1.forEach(function (row, index) {
-        console.log(index)
         var tableRow = document.createElement('tr');
         tableRow.classList.add('item');
 
@@ -153,7 +152,6 @@ function getTable2(){
     table.classList.add('tablee','table-borderlesss')
 
     table2.forEach(function (row, index) {
-        console.log(index)
         var tableRow = document.createElement('tr');
         tableRow.classList.add('item');
 
@@ -171,16 +169,82 @@ function getTable2(){
         }
     })
 }
+function sendMessage(){
+    document.getElementById('sendMessageSection').innerHTML = `
+    <div class="sendMessageHeading">
+        <span></span>
+        <h3>Send Message</h3>
+        <img onclick="closeSendMessage()" src="../images/icons/remove.png" alt="Close">
+    </div>
+    <div class="container">
+        <div class="sendMessageBody">
+            <form action="" method="post" enctype="multipart/form-data">
+                <select name="" id="messageType">
+                    <option value="">-- Select Type --</option>
+                </select>
+                <input type="text" placeholder="Enter Name" class="inputStyle input-color" id="msg_req_user_name" name="name">
+                <input type="text" placeholder="Enter Mobile Number" class="inputStyle input-color" id="msg_req_user_mobile" name="mobile">
+                <input type="text" placeholder="Enter Email Address" class="inputStyle input-color" id="msg_req_user_email" name="email">
+                <textarea id="messageTextarea" name="message" rows="7" placeholder="Enter your message..."></textarea>
+                <div class="file">
+                    <label for="fileInput" class="fileInputLabel">
+                        <span>Browse</span>
+                        <input type="file" id="fileInput" name="file" accept=".jpg, .jpeg, .png, .pdf">
+                    </label>
+                    <span>Allowed file type PNG, JPEG, PDF</span>
+                </div>
+                <button class= "submitSendMsg" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    `
+}
+function videoChat(){
+    document.getElementById('videoChatSection').innerHTML = `
+    <div class="sendMessageHeading">
+        <span></span>
+        <h3>Video Chat(Via Zoom)</h3>
+        <img onclick="closeVideoChat()" src="../images/icons/remove.png" alt="Close">
+    </div>
+    <div class="container">
+        <div class="sendMessageBody">
+            <form action="" method="post" enctype="multipart/form-data">
+                <input type="text" placeholder="Enter Name" class="inputStyle input-color" id="video_req_user_name" name="name">
+                <input type="text" placeholder="Enter Mobile Number" class="inputStyle input-color" id="video_req_user_mobile" name="mobile">
+                <input type="text" placeholder="Enter Email Address" class="inputStyle input-color" id="video_req_user_email" name="email">
+                <input type="date" placeholder="Select a Date" class="inputStyle input-color" id="video_req_date" name="date">
+                <input type="time" placeholder="Select a Time" class="inputStyle input-color" id="video_req_time" name="time">
+                <button class= "submitSendMsg" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+   `
+}
 
-
-
+function showSendMessage(){
+    document.getElementById('sendMessageSection').style.display = 'block'
+}
+function closeSendMessage(){
+    document.getElementById('sendMessageSection').style.display = 'none'
+}
+function showVideoChat(){
+    document.getElementById('videoChatSection').style.display = 'block'
+}
+function closeVideoChat(){
+    document.getElementById('videoChatSection').style.display = 'none'
+}
 function showMore(){
     document.getElementById('popUpSec').style.display = 'block'
 }
 function closeMore(){
     document.getElementById('popUpSec').style.display = 'none'
 }
-
+function showSupportTeam(){
+    document.getElementById('support-slide').style.display = 'block'
+}
+function closeSupportTeam(){
+    document.getElementById('support-slide').style.display = 'none'
+}
 function showStockData(stockType) {
     document.getElementById('currentStockBody').style.display = 'none';
     document.getElementById('oldStockBody').style.display = 'none';
@@ -209,6 +273,7 @@ function updateButtonState(activeButton) {
 
 
 
+
 function includeHeader() {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -217,6 +282,16 @@ function includeHeader() {
         }
     };
     xhttp.open("GET", "../component/layout/afterNavbar.html", true);
+    xhttp.send();
+}
+function includeFooter() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("sectionFooter").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "../component/layout/footer.html", true);
     xhttp.send();
 }
 function getViewportDimensions() {
@@ -241,9 +316,15 @@ window.onload = function() {
     onloadeddata();
     displayDimensions();
     includeHeader();
+    includeFooter();
     getProfile();
     getTable1();
     getTable1More()
     getTable2()
     closeMore()
+    closeSupportTeam()
+    closeSendMessage()
+    closeVideoChat()
+    videoChat();
+    sendMessage();
 };
