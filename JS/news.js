@@ -100,14 +100,8 @@ const miscNews=[
 ];
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    fetchData("todaysNews_api",populatedExchangeNews)
-    populateMediaNews();
-    populatedMiscNews();
-});
-
 function populateMediaNews() {
-    var miscNewsDiv = document.getElementById('miscNews');
+    let miscNewsDiv = document.getElementById('miscNews');
 
     miscNews.forEach(function (newsItem) {
         var newsElement = document.createElement('div');
@@ -132,7 +126,7 @@ function populateMediaNews() {
     });
 }
 function populatedMiscNews() {
-    var meadiaNewsDiv = document.getElementById('mediaNews');
+    let meadiaNewsDiv = document.getElementById('mediaNews');
 
     miscNews.forEach(function (newsItem) {
         var newsElement = document.createElement('div');
@@ -157,7 +151,7 @@ function populatedMiscNews() {
     });
 }
 function populatedExchangeNews(data) {
-    var exchangeNewsDiv = document.getElementById('exchangeNews');
+    let exchangeNewsDiv = document.getElementById('exchangeNews');
 
     data.TodaysNews.forEach(function (newsItem) {
         var newsElement = document.createElement('div');
@@ -183,25 +177,35 @@ function showNews(newsType) {
     document.getElementById('miscNews').style.display = 'none';
 
     document.getElementById(newsType).style.display = 'block';
+    
+    
     updateButtonState(newsType);
-
+    
+    console.log("fghfhgfhfhgfhfhgfhfhfdghfdhfdh")
 }
 function updateButtonState(activeButton) {
-    var buttons = document.querySelectorAll('.newsBtnGroup .btn');
+    console.log(activeButton)
+    let buttons = document.querySelectorAll('.newsBtnGroup .btn');
     buttons.forEach(function (button) {
         button.classList.remove('active');
     });
 
-    var activeButtonElement = document.querySelector('.newsBtnGroup .btn[onclick*="' + activeButton + '"]');
+    let activeButtonElement = document.querySelector('.newsBtnGroup .btn[onclick*="' + activeButton + '"]');
     if (activeButtonElement) {
         activeButtonElement.classList.add('active');
     }
 }
+
 function onloadeddata() {
+    
     document.getElementById('mediaNews').style.display = 'block';
     document.getElementById('exchangeNews').style.display = 'none';
     document.getElementById('miscNews').style.display = 'none';
+    fetchData("todaysNews_api",populatedExchangeNews)
+    populateMediaNews();
+    populatedMiscNews();
 }
-function initializeNews(){
+function news (){
+    
     onloadeddata()
 }
