@@ -202,3 +202,6 @@ function onloadeddata() {
     document.getElementById('exchangeNews').style.display = 'none';
     document.getElementById('miscNews').style.display = 'none';
 }
+function initializeNews(){
+    onloadeddata()
+}

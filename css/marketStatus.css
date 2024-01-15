@@ -15,6 +15,12 @@ body, html {
     display: block;
     margin-top: 10px;
 }
+.cseSection,
+.dseSection,
+.button_search_section,
+.companyDataSection{
+    background-color: #fff !important;
+}
 
 .headingSection{
     background-color: white;
@@ -147,7 +153,7 @@ th:nth-child(-n+3) {
 
 .table-wrapper {
     overflow-y: auto; 
-    height: 350px;
+    height: 500px;
 }
 .table-wrapper-share-price{
     overflow-y: auto; 

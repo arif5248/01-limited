@@ -22,8 +22,3 @@ function displayDimensions() {
     console.log(`Height: ${dimensions.height}px`);
     console.log(`Width: ${dimensions.width}px`);
 }
-window.onload = function() {
-    includeNabButton();
-    displayDimensions();
-    onloadeddata() 
-};

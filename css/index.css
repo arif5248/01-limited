@@ -359,42 +359,7 @@ padding-bottom: 5px;
     font-size: 20px;
 }
 /*-----------------Get New O1 ID-------------------*/
-.instructionLine{
-    color: white;
-}
-select{
-    background-color: transparent;
-    height: 60px;
-    color: #fff;
-}
-select > option{
-    color: #000;
-}
-.mobile{
-    display: flex;
-}
-.countryCode{
-    display: flex;
-    height: 60px;
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.486);
-    border-radius: 5px;
-    color: #fff;
-    padding: 10px;
-    align-items: center;
-    margin-right: 10px;
-}
-.country-city{
-    margin-bottom: 10px;
-}
-#country,
-#city{
-    width: 49%;
-}
-.css-for-select{
-    width: 100%;
-    margin-bottom: 10px;
-}
+
 /*-----------------Bootstrap class-------------------*/
 .bg-light{
     background-color: transparent !important;

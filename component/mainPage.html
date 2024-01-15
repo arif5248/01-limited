@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="boots" rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <link id="main-page" rel="stylesheet" href="../css/mainPage.css">
+    <script id="homeJS" src="../JS/home.js"></script>
+    
+    <script id="boots" src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    
+    <title>Home</title>
+
+</head> 
+<body>
+    <section class="mainSection">
+        <div class="topSection" id="topSection">
+                <nav class="navbar navbar-light bg-light fixed-top">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                            <div class="logo-01">
+                                <img src="../images/01.gif" alt="01">
+                            </div>
+                            <div class="support-team-area">
+                                <p>Support Team</p>
+                                <div class="icon-group" onclick="showSupportTeam()">
+                                    <img src="../images/icons/call.jpg" style="width: 20px;height: auto;" alt="phone call">
+                                    <img src="../images/icons/whatsapp.png" style="width: 20px;height: auto;" alt="WhatsApp">
+                                    <img src="../images/icons/messenger.png" style="width: 20px;height: auto;" alt="Messenger">
+                                    <img src="../images/icons/viber.png" style="width: 20px;height: auto;" alt="Viber">
+                                </div>
+                            </div>
+                    
+                            <div class="offcanvas offcanvas-start" tabindex="1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                                <div class="offcanvas-header">
+                                    <img class="offcanvas-title" id="offcanvasNavbarLabel" src="./images/01.gif" alt="01 ltd">
+            
+                                    <div class="appInfo" >
+                                         <div>
+                                            <span style="font-weight: bold;"> 01 APP </span>  <br> V 1.0.3 <br> 01 Limited
+                                         </div>
+                                         <div class="about01">
+                                            <h5><a href="./component/about01.html">About 01</a></h5>
+                                         </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="offcanvas-body">
+                                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="index.html">Login</a>
+                                            <hr>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="./component/marketStatus.html">Market Staus</a>
+                                            <hr>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="./component/sharePrice.html">Share Price</a>
+                                            <hr>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="./component/news.html">News</a>
+                                            <hr>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="./component/ipoStatus.html">IPO Status</a>
+                                            <hr>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="./component/why01.html">Why 01</a>
+                                            <hr>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="./component/ourService.html">Our Service</a>
+                                            <hr>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="./component/payUs.html">How to Pay Us</a>
+                                            <hr>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="./component/get01Technology.html">Get 01 Technology</a>
+                                            <hr>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="#">Promotions</a>
+                                            <hr>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="./component/notification.html">Notifications</a>
+                                            <hr>
+                                        </li>
+                                    </ul>
+        
+                                    <div class="socialIcon">
+                                        <div class="icon">
+                                            <a href="#">
+                                                <img src="./images/icons/facebook.png" alt="facebook">
+                                            </a>
+                                        </div>
+                                        <div class="icon">
+                                            <a href="#">
+                                                <img src="./images/icons/instagram.png" alt="instagram">
+                                            </a>
+                                        </div>
+                                        <div class="icon">
+                                            <a href="#">
+                                                <img src="./images/icons/youtube.png" alt="youtube">
+                                            </a>
+                                        </div>
+                                        <div class="icon">
+                                            <a href="#">
+                                                <img src="./images/icons/linkedin.png" alt="linkedIn">
+                                            </a>
+                                        </div>
+                                        <div class="icon">
+                                            <a href="#">
+                                                <img src="./images/icons/twitter.png" alt="twitter">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                     </div>
+                 </nav>  
+        </div>
+
+        <div class="mainContentSection" id="mainContentSection">
+
+        </div>
+
+        <div class="bottomSection" id="bottomSecion">
+            <div class="footer-icon" onclick="route('../component/home.html', 'homeMainSection', '../css/home.css','homeJs', '../JS/home.js', initialize);" >
+                    <img style="width: 45px; height: auto;" src="../images/home-button.png" alt="Home">
+                    <span>Home</span>
+                
+            </div>
+            <div class="footer-icon" onclick="route('../component/marketStatus.html','marketMainSection','../css/marketStatus.css', 'marketJs','../JS/marketStatus.js' )">
+                
+                    <img style="width: 45px; height: auto;" src="../images/stock.png" alt="Market">
+                    <span>Market</span>
+                
+            </div>
+            <div class="footer-icon">
+                <a href="">
+                    <img style="width: 45px; height: auto;" src="../images/trade.png" alt="Trade">
+                    <span>Trade</span>
+                </a>
+                
+            </div>
+            <div class="footer-icon" onclick="route('../component/news.html', 'mainNewsSection', '../css/news.css','newsJs', '../JS/news.js', initializeNews);">
+                <img style="width: 45px; height: auto;" src="../images/newspaper.png" alt="News">
+                <span>News</span>
+                
+            </div>
+        </div>
+       
+        
+
+    </section>
+    
+    <script src="../JS/mainPage.js"></script>
+    <script src="../JS/fetchData.js"></script>
+   
+</body>
+</html>

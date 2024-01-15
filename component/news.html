@@ -16,47 +16,50 @@
         <div class="homeButton"><img src="../images/icons/home-button.png" alt="Home"></div>
     </section>
 
-    <section class="button_search_section  ">
-        <div class="container">
-            <div class="searchBox">
-                <div class="input-group">
-                    <div class="input-group-append">
-                        <span class="input-group-text" id="searchIcon">
-                            <img src="../images//icons/magnifying-glass.png" alt="search icon">
-                        </span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="searchIcon">
-                    <div class="reload">
-                        <img src="../images/icons/magnifying-glass.png" alt="Reload">
+    <div class="mainNewsSection" id="mainNewsSection">
+        <div class="button_search_section  ">
+            <div class="container">
+                <div class="searchBox">
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="searchIcon">
+                                <img src="../images//icons/magnifying-glass.png" alt="search icon">
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="searchIcon">
+                        <div class="reload">
+                            <img src="../images/icons/magnifying-glass.png" alt="Reload">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <div class="newsSection">
+            <div class="container newsContainer">
+                <div class="btnwrapper">
+                    <div class="newsBtnGroup">
+                        <button type="button" class="btn active" onclick="showNews('mediaNews')">
+                            MEDIA NEWS
+                        </button>
+                        <button type="button" class="btn" onclick="showNews('exchangeNews')">
+                            EXCHANGE NEWS
+                        </button>
+                        <button type="button" class="btn" onclick="showNews('miscNews')">
+                            MISC NEWS
+                        </button>
+                    </div>
+                    <div class="newsBody">
+                        <div class="mediaNews" id="mediaNews"></div>
+                        <div class="exchangeNews" id="exchangeNews"></div>
+                        <div class="miscNews" id="miscNews"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     
-    <section class="newsSection">
-        <div class="container newsContainer">
-            <div class="btnwrapper">
-                <div class="newsBtnGroup">
-                    <button type="button" class="btn active" onclick="showNews('mediaNews')">
-                        MEDIA NEWS
-                    </button>
-                    <button type="button" class="btn" onclick="showNews('exchangeNews')">
-                        EXCHANGE NEWS
-                    </button>
-                    <button type="button" class="btn" onclick="showNews('miscNews')">
-                        MISC NEWS
-                    </button>
-                </div>
-                <div class="newsBody">
-                    <div class="mediaNews" id="mediaNews"></div>
-                    <div class="exchangeNews" id="exchangeNews"></div>
-                    <div class="miscNews" id="miscNews"></div>
-                </div>
-            </div>
-            
-        </div>
-    </section>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
