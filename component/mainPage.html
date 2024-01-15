@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link id="boots" rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
     <link id="main-page" rel="stylesheet" href="../css/mainPage.css">
-    <script id="homeJS" src="../JS/home.js"></script>
+    <script id="main" src="../JS/mainPage.js"></script>
+    <script id="fetch" src="../JS/fetchData.js"></script>
     
     <script id="boots" src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-    
+    <script  src="../JS/news.js"></script>
+    <script  src="../JS/marketStatus.js"></script>
+    <script  src="../JS/home.js"></script>
     <title>Home</title>
 
 </head> 
@@ -133,12 +136,12 @@
         </div>
 
         <div class="bottomSection" id="bottomSecion">
-            <div class="footer-icon" onclick="route('../component/home.html', 'homeMainSection', '../css/home.css','homeJs', '../JS/home.js', initialize);" >
+            <div class="footer-icon" onclick="route('../component/home.html', 'homeMainSection', '../css/home.css',  initialize);" >
                     <img style="width: 45px; height: auto;" src="../images/home-button.png" alt="Home">
                     <span>Home</span>
                 
             </div>
-            <div class="footer-icon" onclick="route('../component/marketStatus.html','marketMainSection','../css/marketStatus.css', 'marketJs','../JS/marketStatus.js' )">
+            <div class="footer-icon" onclick="route('../component/marketStatus.html','marketMainSection','../css/marketStatus.css' )">
                 
                     <img style="width: 45px; height: auto;" src="../images/stock.png" alt="Market">
                     <span>Market</span>
@@ -151,7 +154,7 @@
                 </a>
                 
             </div>
-            <div class="footer-icon" onclick="route('../component/news.html', 'mainNewsSection', '../css/news.css','newsJs', '../JS/news.js', initializeNews);">
+            <div class="footer-icon" onclick="route('../component/news.html', 'mainNewsSection', '../css/news.css',news)">
                 <img style="width: 45px; height: auto;" src="../images/newspaper.png" alt="News">
                 <span>News</span>
                 
@@ -162,8 +165,7 @@
 
     </section>
     
-    <script src="../JS/mainPage.js"></script>
-    <script src="../JS/fetchData.js"></script>
+    
    
 </body>
 </html>

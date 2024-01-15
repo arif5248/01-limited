@@ -1,4 +1,4 @@
-async function loadContent(page, targetDiv, css, jsID, js) {
+async function loadContent(page, targetDiv, css) {
     document.getElementById('mainContentSection').innerHTML = '';
     try {
         const response = await fetch(page);
@@ -25,30 +25,27 @@ async function loadContent(page, targetDiv, css, jsID, js) {
 
 
         
-        const script = document.head.getElementsByTagName('script');
-        const scriptTagsArray = Array.from(script);
-        scriptTagsArray.forEach(scriptTag => {
-            if (scriptTag.id !== 'boots') {
-                scriptTag.parentNode.removeChild(scriptTag);
-            }
-        });
+        // const script = document.head.getElementsByTagName('script');
+        // const scriptTagsArray = Array.from(script);
+        // scriptTagsArray.forEach(scriptTag => {
+        //     if (scriptTag.id !== 'boots' && scriptTag.id !== 'main' && scriptTag.id !== 'fetch') {
+        //         scriptTag.parentNode.removeChild(scriptTag);
+        //     }
+        // });
         
-        const newScript = document.createElement('script');
-        newScript.src = js;
-        console.log(newScript)
-        newScript.id = jsID;
+        // const newScript = document.createElement('script');
+        // newScript.src = js;
 
-        document.head.appendChild(newScript);
+        // document.head.appendChild(newScript);
         } catch (error) {
             console.error('Error:', error);
         }
 }
 
 
-async function route(page,id,css, jsID, js, callback){
-    console.log(callback)
+async function route(page,id,css, callback){
       document.addEventListener
-        await loadContent(page, id, css, jsID, js);
+        await loadContent(page, id, css, callback);
         if (typeof callback === 'function') {
             callback();
         }
@@ -56,6 +53,6 @@ async function route(page,id,css, jsID, js, callback){
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
-    await loadContent('../component/home.html', 'homeMainSection', '../css/home.css','homeJs', '../JS/home.js');
+    await loadContent('../component/home.html', 'homeMainSection', '../css/home.css');
     
 });

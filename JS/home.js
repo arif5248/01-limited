@@ -206,9 +206,7 @@ function initialize(){
     
 }
 
-function initializeNews(){
-    onloadeddata()
-}
+
 
 window.onload = function() {
     getProfile();
